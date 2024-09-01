@@ -1,0 +1,14 @@
+{
+  "name": "@juanseriera/supremeng",
+  "version": "0.0.2",
+  "peerDependencies": {
+    "@angular/cdk": "^18.2.0",
+    "@angular/common": "^18.2.0",
+    "@angular/core": "^18.2.0",
+    "primeng": "^17.18.9"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

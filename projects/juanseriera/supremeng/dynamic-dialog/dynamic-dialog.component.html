@@ -1,0 +1,28 @@
+<div class="p-dialog">
+  <div supDialogHeader>
+    <ng-container
+      [ngTemplateOutlet]="data.headerTemplate || dialogHeader"
+    ></ng-container>
+  </div>
+
+  <div supDialogContent>
+    <ng-container [ngTemplateOutlet]="data.bodyTemplate || null"></ng-container>
+  </div>
+
+  @if (data.footerTemplate) {
+  <div supDialogFooter>
+    <ng-container [ngTemplateOutlet]="data.footerTemplate"></ng-container>
+  </div>
+  }
+</div>
+
+<ng-template #dialogHeader>
+  <div class="supremeng__dialog-header">
+    <h1>{{ data.title() }}</h1>
+    @if (data.showCloseIcon()) {
+    <div class="supremeng__dialog-header__close-icon" (click)="close()">
+      <i [class]="data.closeIcon() || 'pi pi-times'"></i>
+    </div>
+    }
+  </div>
+</ng-template>
